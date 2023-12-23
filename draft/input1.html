@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Password with Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: calc(100% - 30px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-group-append {
+      cursor: pointer;
+    }
+
+    label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #777;
+      font-size: 14px;
+      pointer-events: none;
+      transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #4caf50;
+    }
+
+    input:focus + label, input:not(:placeholder-shown) + label {
+      transform: translateY(-20px);
+      font-size: 12px;
+      color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-container">
+  <input type="password" id="password" placeholder=" ">
+  <label for="password">Password</label>
+  <div class="input-group-append">
+    <span class="input-group-text" id="showPasswordToggle">
+      <i class="fas fa-eye"></i>
+    </span>
+  </div>
+</div>
+
+<!-- Bootstrap JS and Font Awesome -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script>
+  // Add event listeners to input and eye icon to toggle password visibility
+  document.addEventListener('DOMContentLoaded', function () {
+    var passwordInput = document.getElementById('password');
+    var showPasswordToggle = document.getElementById('showPasswordToggle');
+
+    showPasswordToggle.addEventListener('click', function () {
+      var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+    });
+  });
+</script>
+
+</body>
+</html>

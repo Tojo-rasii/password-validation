@@ -1,0 +1,164 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main section {
+    background: #fff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    margin-top: 0;
+    border-radius: 5px;
+    width: 27vw;
+    height: max-content;
+    scale: 1;
+}
+
+main section article {
+    display: flex;
+    flex-direction: column;
+}
+main section article:nth-child(1) p{
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.6em;
+    color: #777;
+}
+.bi-dot {
+    font-size: 1em;
+}
+#showPasswordToggle{
+    margin-left: 2.2em;
+}
+.bi-eye-slash{
+    color: #4caf50;
+}
+main section article:nth-child(2){
+    padding: 0.5em;
+    border: none;
+    outline: 1px solid silver;
+    caret-color: blue;
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    align-items: center;
+    padding-inline: 0.7em;
+}
+input {
+    padding: 0.2em;
+    border: none;
+    outline: none;
+    caret-color: #4caf50;
+    padding-left: 0.7em;
+    border-left: 1px solid silver;
+    transition: border-color 0.3s ease;
+    color: #505050;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label {
+    /* margin-top: -3.9em; */
+    transform: translateY(-25px);
+    font-size: 13.1px;
+    color: #4caf50;
+    background: #fff;
+    padding-inline: 0.5em;
+  }
+
+label {
+    position: absolute;
+    color: #777;
+    margin-left: 2.5em;
+    font-size: 0.9em;
+    pointer-events: none;
+    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+main section article:nth-child(3) button{
+    padding: 0.5em;
+    border: none;
+    outline: 1px solid #4caf50;
+    border-radius: 0.4em;
+    text-align: center;
+    padding-inline: 0.7em;
+    font-weight: 600;
+    color: #fff;
+    background: #4caf50;
+    border: none;
+}
+main section article:nth-child(3) button:focus{
+    outline: 1px solid #4caf50;
+}
+main section article:nth-child(3) button:active{
+    outline: 1px solid yellow;
+}
+
+#textValide,#UpperCaseValide,#specialCharacterValide,#numberValide{
+    font-size: 0.9em;
+    width: max-content;
+    text-transform: capitalize;
+    /* display: none; */
+}
+
+#required{
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 0.4em;
+    padding-inline: 1em;
+    align-items: center;
+    font-size: 0.9em;
+    margin-top: 5.3em;
+    margin-left: 2.3em;
+    display: none;
+}
+footer{
+    position: absolute;
+    top: 84.5%;
+    left: 36.6%;
+}
+footer div section article i{
+    color: #777;
+    cursor: pointer;
+    transition: 0.1s;
+    font-style: normal;
+}
+footer div section article i:active{
+    scale: 0.9;
+}
+footer div section article i:hover{
+    color: #4caf50;
+}
+footer div section article:nth-child(2) span{
+    font-size: 1em;
+    color: #777;
+}
+footer div section article:nth-child(2) span:nth-child(3){
+    cursor: pointer;
+}
+footer div section article:nth-child(2) span:nth-child(3):hover{
+    color: #4caf50;
+}
+footer div section article:nth-child(2) span:nth-child(3):active{
+    color: #4caf50;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.bi-link{
+    transform: rotate(360deg);
+}

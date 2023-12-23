@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #eye-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #eye {
+            width: 100px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50px 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .pupil {
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 100ms;
+        }
+    </style>
+</head>
+<body>
+    <div id="eye-container">
+        <div id="eye">
+            <div class="pupil"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eye = document.getElementById("eye");
+            const pupil = document.querySelector(".pupil");
+
+            eye.addEventListener("mousemove", (e) => {
+                const { clientX: mouseX, clientY: mouseY } = e;
+
+                const eyeRect = eye.getBoundingClientRect();
+                const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+                const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+
+                const deltaX = mouseX - eyeCenterX;
+                const deltaY = mouseY - eyeCenterY;
+
+                const angle = Math.atan2(deltaY, deltaX);
+                const distance = Math.min(eyeRect.width / 4, eyeRect.height / 4);
+
+                const pupilX = eyeCenterX + distance * Math.cos(angle);
+                const pupilY = eyeCenterY + distance * Math.sin(angle);
+
+                pupil.style.transform = `translate(-50%, -50%) translate(${pupilX}px, ${pupilY}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

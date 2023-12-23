@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="bg-body-secondary">
+    <div class="d-flex flex-column">
+        <header class="m-4 d-flex justify-content-center mt-4">
+            <i class="bi-person-circle fs-1 bg-white pt-3 pb-3 shadow-sm ps-5 pe-5 rounded-2" style="color: #4caf50;"></i>
+        </header>
+        <main>
+            <section class="shadow-sm">
+                <article>
+                    <p>Validation <span style="color: #4caf50;">mot de passe</span>&nbsp;&nbsp;<i
+                            class="bi-check-circle mt-1"></i></p>
+                </article>
+                <article>
+                    <i class="bi-lock"></i>
+                    <input type="password" id="password" placeholder=" ">
+                    <label for="password">Mot de passe</label>
+                    <!-- SPAN -->
+                    <!-- <span id="required" class="bi-info-circle">Please enter your password</span> -->
+                    <span id="showPasswordToggle">
+                        <i id="eyeIcon" class="bi-eye"></i>
+                    </span>
+                </article>
+                <article>
+                    <button id="valider">Valider</button>
+                </article>
+                <article class="d-flex flex-col gap-2">
+                    <span id="textValide"></span>
+                    <span id="UpperCaseValide"></span>
+                    <span id="specialCharacterValide"></span>
+                    <span id="numberValide"></span>
+                </article>
+            </section>
+        </main>
+        <footer class="d-flex justify-content-center text-center">
+            <div>
+                <section  class="d-flex flex-column gap-4">
+                    <article class="d-flex flex-row gap-3 justify-content-center">
+                        <a href="https://www.facebook.com/tooj.ras/" target="_blank"><i class="bi-facebook fs-4"></i></a>
+                        <a href="https://github.com/Tojo-rasii?tab=repositories" target="_blank"><i class="bi-github fs-4"></i></a>
+                        <a href="https://www.linkedin.com/feed/" target="_blank"><i class="bi-linkedin fs-4"></i></a>
+                    </article>
+                    <article class="d-flex flex-row gap-2">
+                        <span>
+                            &copy; Copyright_TR.
+                        </span>
+                        <span>|</span>
+                        <span>
+                            <a href="https://tojo-rasii.github.io/rasii-online/" target="_blank" style="text-decoration: none;"><i class="bi-link"> tojo-rasii.github.io/rasii-online</i></a>
+                        </span>
+                    </article>
+                </section>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

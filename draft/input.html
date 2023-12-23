@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Animation with Label</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+    }
+
+    label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #777;
+      background: #f4f4f4;
+      padding: 0.3em;
+      font-size: 14px;
+      pointer-events: none;
+      transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #4caf50;
+    }
+
+    input:focus + label, input:not(:placeholder-shown) + label {
+      transform: translateY(-20px);
+      font-size: 12px;
+      color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-container">
+  <input type="text" id="username" placeholder=" ">
+  <label for="username">Username</label>
+</div>
+
+<div class="input-container">
+  <input type="password" id="password" placeholder=" ">
+  <label for="password">Password</label>
+</div>
+
+<script>
+  // Add event listeners to input elements to toggle the label animation
+  document.addEventListener('DOMContentLoaded', function () {
+    var inputs = document.querySelectorAll('input');
+
+    inputs.forEach(function (input) {
+      input.addEventListener('focus', function () {
+        input.parentElement.querySelector('label').classList.add('focused');
+      });
+
+      input.addEventListener('blur', function () {
+        if (input.value === '') {
+          input.parentElement.querySelector('label').classList.remove('focused');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
