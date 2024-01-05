@@ -7,6 +7,8 @@
 }
 :root{
     --bg-style: radial-gradient(90deg, #2ed61e,#0ee215);
+    ---color-one: #27ae1a;
+    ---color-two: #4caf50;
 }
 
 body {
@@ -38,7 +40,7 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 10px solid #24c515;
+    border: 10px solid var(---color-one);
     outline: 0;
     background: #272727;
     box-sizing: border-box;
@@ -96,7 +98,7 @@ main section article:nth-child(1) p{
     margin-left: 2.2em;
 }
 .bi-eye-slash{
-    color: #4caf50;
+    color: var(---color-one);
 }
 main section article:nth-child(2){
     padding: 0.5em;
@@ -110,11 +112,15 @@ main section article:nth-child(2){
     align-items: center;
     padding-inline: 0.7em;
 }
+
+main section article :has(input:invalid) input{
+    border: 2x solid red;
+}
 input {
     padding: 0.2em;
     border: none;
     outline: none;
-    caret-color: #4caf50;
+    caret-color: var(---color-one);
     padding-left: 0.7em;
     border-left: 1px solid silver;
     transition: border-color 0.3s ease;
@@ -125,7 +131,7 @@ input:focus + label, input:not(:placeholder-shown) + label {
     /* margin-top: -3.9em; */
     transform: translateY(-25px);
     font-size: 13.1px;
-    color: #4caf50;
+    color: var(---color-one);
     background: #fff;
     padding-inline: 0.5em;
   }
@@ -142,17 +148,17 @@ label {
 main section article:nth-child(3) button{
     padding: 0.5em;
     border: none;
-    outline: 1px solid #4caf50;
+    outline: 1px solid var(---color-one);
     border-radius: 0.4em;
     text-align: center;
     padding-inline: 0.7em;
     font-weight: 600;
     color: #fff;
-    background: #4caf50;
+    background: var(---color-one);
     border: none;
 }
 main section article:nth-child(3) button:focus{
-    outline: 1px solid #4caf50;
+    outline: 1px solid var(---color-one);
 }
 main section article:nth-child(3) button:active{
     outline: 1px solid yellow;
@@ -187,12 +193,17 @@ footer div section article i{
     cursor: pointer;
     transition: 0.1s;
     font-style: normal;
+    background: #fff;
+    padding: 0.2em;
+    padding-inline: 0.4em;
+    border-radius: 0.3em;
 }
 footer div section article i:active{
     scale: 0.9;
 }
 footer div section article i:hover{
-    color: #4caf50;
+    background: var(---color-one);
+    color: #fff;
 }
 footer div section article:nth-child(2) span{
     font-size: 1em;
@@ -202,12 +213,20 @@ footer div section article:nth-child(2) span:nth-child(3){
     cursor: pointer;
 }
 footer div section article:nth-child(2) span:nth-child(3):hover{
-    color: #4caf50;
+    color: var(---color-one);
 }
 footer div section article:nth-child(2) span:nth-child(3):active{
-    color: #4caf50;
+    color: var(---color-one);
     text-decoration: underline;
     text-underline-offset: 4px;
+}
+footer div section article:nth-child(2) i{
+    border-radius: 0.2em;
+    padding-bottom: 0.4em;
+}
+footer div section article:nth-child(2) i:hover{
+    background: #fff;
+    color: var(---color-one);
 }
 .bi-link{
     transform: rotate(360deg);
