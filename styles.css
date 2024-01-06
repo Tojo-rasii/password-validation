@@ -13,6 +13,15 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    background: transparent;
+    width: 0.8em;
+}
+body::-webkit-scrollbar-thumb{
+    background: var(---color-one);
+    border-radius: 5em;
 }
 /* HEADER EYE */
 /*  */
@@ -184,9 +193,8 @@ main section article:nth-child(3) button:active{
     display: none;
 }
 footer{
-    position: absolute;
-    top: 84.5%;
-    left: 36.6%;
+   display: flex;
+   justify-content: center;
 }
 footer div section article i{
     color: #777;
