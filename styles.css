@@ -239,3 +239,125 @@ footer div section article:nth-child(2) i:hover{
 .bi-link{
     transform: rotate(360deg);
 }
+
+
+
+/* RESPONSIVE MOBILE */
+/* MOBILE */
+/*-----------------------------------*\
+  #RESPONSIVE
+\*-----------------------------------*/
+
+@media (min-width: 150px) and (max-width: 2000px) {
+    body{
+    overflow-x: hidden;
+    }
+}
+/**
+ * responsive larger than 150px screen
+ */
+
+@media (min-width: 150px) {
+    .box {
+        display: flex;
+        gap: 0;
+    }
+
+    .box .eye {
+        scale: 0.8;
+    }
+
+    /* FORM MDP */
+    /* PASS */
+    main section {
+        width: max-content;
+    }
+
+    footer {
+        width: max-content;
+        margin: 0 auto;
+    }
+}
+
+/**
+   * responsive larger than 450px screen
+   */
+
+@media (min-width: 450px) {
+    .box {
+        display: flex;
+        gap: 0.1em;
+    }
+
+    .box .eye {
+        scale: 0.9;
+    }
+
+    /* FORM MDP */
+    /* PASS */
+    main section {
+        width: max-content;
+    }
+
+    footer {
+        width: max-content;
+        margin: 0 auto;
+    }
+}
+
+/**
+   * responsive larger than 580px screen
+   */
+
+@media (min-width: 580px) {
+
+    /* FORM MDP */
+    /* PASS */
+    main section {
+        width: max-content;
+    }
+
+    footer {
+        width: max-content;
+        margin: 0 auto;
+    }
+
+}
+
+
+/**
+   * responsive larger than 768px screen
+   */
+
+@media (min-width: 768px) {
+    .box {
+        display: flex;
+        gap: 1em;
+    }
+
+    .box .eye {
+        scale: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .box {
+        display: flex;
+        gap: 1em;
+    }
+
+    .box .eye {
+        scale: 1;
+    }
+
+    /* FORM MDP */
+    /* PASS */
+    main section {
+        width: max-content;
+    }
+
+    footer {
+        width: max-content;
+        margin: 0 auto;
+    }
+}
