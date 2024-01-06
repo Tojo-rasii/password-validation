@@ -14,7 +14,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    padding-inline: 1em;
 }
 body::-webkit-scrollbar{
     background: transparent;
@@ -75,6 +74,7 @@ body::-webkit-scrollbar-thumb{
 main {
     display: flex;
     justify-content: center;
+    padding-inline: 1em;
 }
 
 main section {
